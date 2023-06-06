@@ -1,0 +1,32 @@
+*{
+    font-family: Georama;
+    outline: none;
+}
+.name,.active{
+    transition: all .4s;
+    /* display: none    ; */
+}
+.active:hover{
+    transition: all .4s;
+    color: white;
+    /* background: rgba(189, 189, 189, 0.662); */
+    background: darkorchid;
+}
+.active:hover .name{
+    color: white;
+    transition: all .4s;
+    transform: translateX(10px);
+}
+.chart{
+    transition: all .4s;
+    cursor: pointer;
+}
+.chart:hover{
+    transform: translateY(-10px);
+}
+.row *:hover{
+    background: darkorchid;
+    cursor: pointer;
+    color: white;
+
+}
