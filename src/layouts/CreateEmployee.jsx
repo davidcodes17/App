@@ -1,6 +1,13 @@
-import { Box, Button, Flex, FormErrorMessage, Heading, Input, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, Input, Text } from '@chakra-ui/react'
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { UserCirlceAdd } from 'iconsax-react'
+import Modala from '../components/Modala';
 
 const CreateEmployee = () => {
 const url = "http://localhost:8080/api/users";
@@ -37,9 +44,21 @@ const createEmployee = ()=>{
             })
     }).then(res=>{
         res.json();
+    }).then(data=>{
+      console.log(data);
     })
     location.reload();
 }
+
+// {
+//   "firstname" :  "DC",
+//   "lastname" : "DC",
+//   "email" :  "dc@gmail.com",
+//   "phoneNumber" : 20032,
+//   "accountDetails" :  "20000",
+//   "salarySigned" : 202020
+
+// }
 
 return (
     <Box mt={3}>
@@ -51,7 +70,7 @@ return (
           <Box>
             <Text mb={2}>First Name</Text>
             <Input
-              border={"2px solid black"}
+            required
               value={forms.firstName}
               onChange={(e) => {
                 setForms({ ...forms, firstName: e.target.value });
@@ -66,7 +85,7 @@ return (
           <Box>
             <Text mb={2}>Last Name</Text>
             <Input
-              border={"2px solid black"}
+            required
               value={forms.lastName}
               onChange={(e) => {
                 setForms({ ...forms, lastName: e.target.value });
@@ -83,7 +102,7 @@ return (
           <Box>
             <Text mb={2}>Email</Text>
             <Input
-              border={"2px solid black"}
+              required
               value={forms.email}
               onChange={(e) => {
                 setForms({ ...forms, email: e.target.value });
@@ -98,7 +117,7 @@ return (
           <Box>
             <Text mb={2}>Phone Number</Text>
             <Input
-              border={"2px solid black"}
+              required
               value={forms.phoneNumber}
               onChange={(e) => {
                 setForms({ ...forms, phoneNumber: e.target.value });
@@ -115,7 +134,7 @@ return (
           <Box>
             <Text mb={2}>Account Details</Text>
             <Input
-              border={"2px solid black"}
+            required
               value={forms.accountDetails}
               onChange={(e) => {
                 setForms({ ...forms, accountDetails: e.target.value });
@@ -130,7 +149,7 @@ return (
           <Box>
             <Text mb={2}>Salary Signed</Text>
             <Input
-              border={"2px solid black"}
+            required
               value={forms.salarySigned}
               onChange={(e) => {
                 setForms({ ...forms, salarySigned: e.target.value });
@@ -150,7 +169,8 @@ return (
           width={"460px"}
           gap={2}
           onClick={createEmployee}
-          py={3}
+          py={0}
+          height={50}
           color={"white"}
           borderRadius={10}
           fontSize={"22px"}
@@ -158,6 +178,11 @@ return (
           <UserCirlceAdd size={"30px"} />
           <Text>Create Employee</Text>
         </Button>
+
+        <Alert status='success'>
+        <AlertIcon />
+        Data uploaded to the server. Fire on!
+        </Alert>
       </Box>
     </Box>
   );

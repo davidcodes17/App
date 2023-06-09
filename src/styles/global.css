@@ -1,6 +1,10 @@
 *{
+    /* font-family: Argentum Sans; */
+    /* font-family: Manrope; */
     font-family: Georama;
-    outline: none;
+    overflow-y: hidden;
+    /* outline: 0; */
+    /* box-shadow: 0px 0px 0px black; */
 }
 .name,.active{
     transition: all .4s;
@@ -9,7 +13,7 @@
 .active:hover{
     transition: all .4s;
     color: white;
-    /* background: rgba(189, 189, 189, 0.662); */
+    /* background: rgba(189, 189, 189, 0.243); */
     background: darkorchid;
 }
 .active:hover .name{
@@ -29,4 +33,11 @@
     cursor: pointer;
     color: white;
 
+}
+.panel{
+    transition: all .4s;
+}
+.panel:hover{
+    box-shadow: 0px 0px 1px white;
+    transition: all .4s;
 }
