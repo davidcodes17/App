@@ -1,10 +1,13 @@
 *{
     /* font-family: Argentum Sans; */
     /* font-family: Manrope; */
-    font-family: Georama;
+    /* font-family: Georama; */
     overflow-y: hidden;
     /* outline: 0; */
     /* box-shadow: 0px 0px 0px black; */
+}
+html{
+    background: rgba(189, 189, 189, 0.243);
 }
 .name,.active{
     transition: all .4s;
@@ -13,7 +16,6 @@
 .active:hover{
     transition: all .4s;
     color: white;
-    /* background: rgba(189, 189, 189, 0.243); */
     background: darkorchid;
 }
 .active:hover .name{
