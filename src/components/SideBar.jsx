@@ -21,34 +21,38 @@ import {
 
 const SideBar = () => {
   return (
-    <Box>
+    <Box mx={3}>
       <Link to="/dashboard">
-        <NavTemplate icon={<Category2 variant="Bold" />} name="Dashboard" />
+        <NavTemplate icon={<Category2 variant="Bulk" />} name="Dashboard" />
       </Link>
-      <NavTemplate icon={<Wallet variant="Bold" />} name="Payments" />
+      <NavTemplate icon={<Wallet variant="Bulk" />} name="Payments" />
       <Link to="/createEmployee">
         <NavTemplate
-          icon={<ProfileAdd variant="Bold" />}
+          icon={<ProfileAdd variant="Bulk" />}
           name="Create Employee"
         />
       </Link>
       <Link to={"/deleteEmployee"}>
           <NavTemplate
-            icon={<ProfileDelete variant="Bold" />}
+            icon={<ProfileDelete variant="Bulk" />}
             name="Delete Employee"
           />
       </Link>
+      <Link to={'/updateEmployee'}>
       <NavTemplate
-        icon={<ArrowForwardSquare variant="Bold" />}
+        icon={<ArrowForwardSquare variant="Bulk" />}
         name="Update Employee"
       />
-      <NavTemplate
-        icon={<DocumentText variant="Bold" />}
+      </Link>
+      {/* <NavTemplate
+        icon={<DocumentText variant="Bulk" />}
         name="View Employee"
-      />
-      <NavTemplate icon={<ArrowRotateRight variant="Bold" />} name="History" />
-      <NavTemplate icon={<Setting2 variant="Bold" />} name="Settings" />
-      <NavTemplate icon={<Logout variant="Bold" />} name="Logout" />
+      /> */}
+      <NavTemplate icon={<ArrowRotateRight variant="Bulk" />} name="History" />
+      <Link to={"/settings"}>
+        <NavTemplate icon={<Setting2 variant="Bulk" />} name="Settings" />
+      </Link>
+      <NavTemplate icon={<Logout variant="Bulk" />} name="Logout" />
     </Box>
   );
 };

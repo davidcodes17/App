@@ -9,8 +9,8 @@ const NavTemplate = (props) => {
     }
   }
   return (
-        <Box mx={4} >
-            <Flex alignItems={'center'} gap={2} my={'7px'}  borderRadius={10} color={'black  '} px={5} py={'10px'} cursor={'pointer'} className='active'>
+        <Box >
+            <Flex alignItems={'center'} gap={2} my={'14px'}  borderRadius={10} color={'black'} px={5} py={'13px'} cursor={'pointer'} className='active'>
                 {props.icon}
                 <Text fontSize={15} color={'black'}  className='name'>{props.name}</Text>
             </Flex>

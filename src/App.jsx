@@ -6,6 +6,8 @@ import CreateEmployee from "./layouts/CreateEmployee";
 import Wraper from "./components/Wraper";
 import DashboardPage from "./layouts/DashboardPage";
 import DeleteEmployee from "./layouts/DeleteEmployee";
+import Settings from "./layouts/Settings";
+import UpdateEmployee from "./layouts/UpdateEmployee";
 function App() {
   return (
     <>
@@ -15,6 +17,8 @@ function App() {
     <Route path="/createEmployee" element={<Wraper><CreateEmployee /></Wraper>} />
     <Route path="/dashboard" element={<Wraper><DashboardPage /></Wraper>} />
     <Route path="/deleteEmployee" element={<Wraper><DeleteEmployee /></Wraper>} />
+    <Route path="/settings" element={<Wraper><Settings /></Wraper>} />
+    <Route path="/updateEmployee" element={<Wraper><UpdateEmployee /></Wraper>} />
    </Routes>
     </>
   );

@@ -1,5 +1,5 @@
-import { Box, Flex, Heading, Icon, Text } from "@chakra-ui/react";
-import { Bag, Bag2, BagCross, BagCross1, BagHappy, BagTick, BagTick2, DollarCircle, Notification, Notification1, NotificationBing, NotificationCircle, People, SaveMinus, User, UserCirlceAdd, UserTag, Wallet } from "iconsax-react";
+import { Box, Flex, Heading, Icon, Switch, Text } from "@chakra-ui/react";
+import { Notification, User } from "iconsax-react";
 import React from "react";
 import Dash from "../components/Dash";
 import Emoloyee from "../components/Emoloyee";
@@ -13,7 +13,8 @@ const DashboardPage = () => {
         <Box>
             <Flex alignItems={'center'} gap={5}>
                 <Icon as={Notification} fontSize={20} />
-                <Heading fontSize={5}><User size={20} /></Heading>
+                <User size={20} />
+                <Switch colorScheme="teal" />
             </Flex>
 
         </Box>
@@ -22,7 +23,6 @@ const DashboardPage = () => {
             <Modala/>
             <Emoloyee />
             <GetEmployee />
-       
     </Box>
   );
 };

@@ -1,22 +1,11 @@
-import { Box, Button, Flex, Heading, Input, Text, useToast } from '@chakra-ui/react'
-import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-} from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, Input, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
-import { UserCirlceAdd } from 'iconsax-react'
-import Modala from '../components/Modala';
 
-const CreateEmployee = () => {
-const url = "http://localhost:8080/api/users";
-// const firstName = document.querySelector('.firstname');
-// const lastName = document.querySelector('.lastname');
-// const Email = document.querySelector('.email');
-// const PhoneNumber = document.querySelector('.phoneNumber');
-// const AccountDetails = document.querySelector('.accountDetails');
-// const SalarySigned = document.querySelector('.salarySigned');
+const UpdateEmployee = () => {
+const url = "http://localhost:8080/api/user/";
+const [ID, setID]=useState({
+    id : ''
+})
 const [forms, setForms]=useState({
     firstName:'',
     lastName:'',
@@ -25,10 +14,10 @@ const [forms, setForms]=useState({
     accountDetails:'',
     salarySigned:'',
 })
-const createEmployee = ()=>{
+const updateEmp = ()=>{
 
-    fetch(url,{
-        method : 'POST',
+    fetch(`${url}${ID.id}`,{
+        method : 'PUT',
         mode : 'cors',
         headers : {
             'Content-Type' : 'application/json'
@@ -47,15 +36,33 @@ const createEmployee = ()=>{
     }).then(data=>{
       console.log(data);
     })
-    location.reload();
+    location.replace('/dashboard');
 }
-const toast = useToast();
-return (
-    <Flex mt={3} justifyContent={'center'} className='empl'>
-      <Box className="employeeForm">
-        <Heading fontSize={30} fontWeight={"bolder"}>
-          Create New Employee
-        </Heading>
+  return (
+    <Box mt={3}>
+        <Text fontSize={30}>Update Employee</Text>
+
+        <Box>
+        <Text py={2}>Please Enter Employee ID</Text>
+        <Input placeholder='ID'  value={ID.id}
+              onChange={(e) => {
+                setID({ ...ID, id: e.target.value });
+              }} />
+        </Box>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <Flex mt={10} gap={10}>
           <Box>
             <Text mb={2}>First Name</Text>
@@ -152,33 +159,10 @@ return (
             />
           </Box>
         </Flex>
-        <Button
-          mt={10}
-          bg={"darkorchid"}
-          px={"40px"}
-          gap={2}
-          onClick={()=>{
-            createEmployee()
-                toast({
-                    title : 'New Employee Created',
-                    status : 'success',
-                    isClosable : true,
-                    colorScheme :'pink'
-                })
-          }}
-          py={0}
-          height={50}
-          color={"white"}
-          borderRadius={10}
-          fontSize={"20px"}
-        >
-          <Text>Create Employee</Text>
-        </Button>
 
-
-      </Box>
-    </Flex>
-  );
+        <Button mt={5} float={'right'} bg={'darkorchid'} color={'white'} onClick={updateEmp}>Update Employee</Button>
+    </Box>
+  )
 }
 
-export default CreateEmployee
+export default UpdateEmployee

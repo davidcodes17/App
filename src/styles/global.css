@@ -1,10 +1,8 @@
 *{
-    /* font-family: Argentum Sans; */
+    font-family: Argentum Sans;
     /* font-family: Manrope; */
-    /* font-family: Georama; */
-    overflow-y: hidden;
-    /* outline: 0; */
-    /* box-shadow: 0px 0px 0px black; */
+    /* overflow-y: hidden; */
+    /* font-family: Georama;   */
 }
 html{
     background: rgba(189, 189, 189, 0.243);
@@ -40,6 +38,24 @@ html{
     transition: all .4s;
 }
 .panel:hover{
-    box-shadow: 0px 0px 1px white;
+    /* box-shadow: 0px 0px 1px white; */
     transition: all .4s;
+}
+.empl{
+    display: flex;
+    justify-content: center;
+}
+.panels{
+    display: flex;
+    gap: 30px;
+}
+
+@media screen and (max-width : 720px) {
+    .name{
+        font-size: 10px;
+        display: none;
+    }
+    .panels{
+        display: block;
+    }
 }
