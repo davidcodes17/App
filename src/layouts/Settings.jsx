@@ -1,10 +1,6 @@
 import { Box, Flex, Heading,Switch, Text, RadioGroup, Radio, Button } from '@chakra-ui/react'
-import React, { useState } from 'react'
 
 const Settings = () => {
-const [font,setFont] = useState({
-    fonts : ''
-})
   return (
     <Box mt={4}>
         <Heading fontWeight={200}>Settings</Heading>
@@ -16,7 +12,7 @@ const [font,setFont] = useState({
             <Flex alignItems={'center'} gap={20} py={5}>
                 <Text fontSize={20}>Font Family</Text>
                <RadioGroup >
-                    <Radio className={className} ></Radio>
+                    <Radio ></Radio>
                     <Radio name='font' pl={10}>Augumentaum Sans</Radio>
                     <Radio name='font' pl={10}>Poppins</Radio>
                     <Radio name='font' pl={10}>Default</Radio>
