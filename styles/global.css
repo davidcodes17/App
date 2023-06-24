@@ -1,0 +1,129 @@
+*{
+    font-family: Poppins;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    transition: all .4s;
+}
+.boxer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 10px 50px;
+}
+.pad{
+    padding: 40px 80px;
+}
+.ham{
+    display: none;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scrool{
+    position: fixed;
+    bottom: 50px;
+    right: 600px;
+    cursor: pointer;
+    text-align: center;
+}
+.scrool:hover .text{
+    opacity: 1;
+    transition: all 1s;
+}
+.text{
+    opacity: 0;
+    transition: all 1s;
+}
+.animator{
+    transition: all .4s;
+}
+.mother{
+    padding-top: 70px;
+}
+.box{
+    background: #0f101c;
+}
+.head{
+    font-size: 50px;
+}
+.child{
+    font-size: 20px;
+}
+.txt{
+    font-size: 10px;
+}
+.dc{
+    font-size: 30px;
+    font-weight: 900;
+}
+.abt{
+    padding: 80px 0px;
+}
+.abt-me{
+    font-size: 12px;
+}
+@media screen and (max-width:720px) {
+    *{
+        overflow-y: visible;
+    }
+    .boxer{
+        padding: 10px 20px;
+    }
+    .pad{
+        padding: 0px;
+    }
+    .nav{
+        display: none;
+    }
+    .bg-img{
+        display: none;
+    }
+    .join{
+        background: url('asset.png');
+        background-size: cover;
+    }
+    .blur{
+        padding: 20px;
+        background: #0000001e;
+        z-index: -99;
+        backdrop-filter: blur(5px);
+    }
+    .mother{
+        padding-top: 40px;
+    }
+    .head{
+        font-size: 30px;
+    }
+    .child{
+        font-size: 20px;
+    }
+    .txt{
+        font-size: 8px;
+    }
+    .input{
+        display: none;
+    }
+    .box{
+        background: none;
+    }
+    .abt{
+        display: block;
+        padding: 20px;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .abt-me{
+        font-size: 13px;
+    }
+    .side{
+        display: none;
+    }
+    .dc{
+        font-size: 30px;
+    }
+    .github-link{
+        font-size: 15px;
+    }
+}

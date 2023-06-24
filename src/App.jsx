@@ -1,27 +1,37 @@
-import { Box, Heading } from "@chakra-ui/react";
-import '../src/styles/global.css'
-import Dashboard from "./pages/Dashboard";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CreateEmployee from "./layouts/CreateEmployee";
-import Wraper from "./components/Wraper";
-import DashboardPage from "./layouts/DashboardPage";
-import DeleteEmployee from "./layouts/DeleteEmployee";
-import Settings from "./layouts/Settings";
-import UpdateEmployee from "./layouts/UpdateEmployee";
-function App() {
-  return (
-    <>
+import React, { useRef, useState } from "react";
+import Header from "./components/Header";
+import { Box, Button, Flex, IconButton, Text } from "@chakra-ui/react";
+import Hero from "./components/Hero";
+import { ArrowDown3 } from "iconsax-react";
+import About from "./components/About";
+import { Link } from "react-router-dom";
 
-   <Routes>
-    <Route path="/" element={<Wraper><Dashboard /></Wraper>} />
-    <Route path="/createEmployee" element={<Wraper><CreateEmployee /></Wraper>} />
-    <Route path="/dashboard" element={<Wraper><DashboardPage /></Wraper>} />
-    <Route path="/deleteEmployee" element={<Wraper><DeleteEmployee /></Wraper>} />
-    <Route path="/settings" element={<Wraper><Settings /></Wraper>} />
-    <Route path="/updateEmployee" element={<Wraper><UpdateEmployee /></Wraper>} />
-   </Routes>
-    </>
+const App = () => {
+  return (
+    <Box className="pad">
+      <Box className="join">
+        <Box className="blur">
+          <Header />
+          <Hero />
+        </Box>
+      </Box>
+     <Flex justifyContent={'center'}>
+     <Box px={4} py={2} borderRadius={40} className="scrool">
+        <Text className="text">Scroll Down</Text>
+        <a href='#id'>
+        <IconButton
+          className="animator"
+          borderRadius={40}
+          icon={<ArrowDown3 color="white" />}
+        ></IconButton>
+        </a>
+      </Box>
+     </Flex>
+      <Box id="id" mt={20}>
+        <About />
+      </Box>
+    </Box>
   );
-}
+};
 
 export default App;
