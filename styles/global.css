@@ -21,6 +21,14 @@
     align-items: center;
     justify-content: center;
 }
+.link{
+    font-size: 10px;
+    text-align: center;
+}
+.link:hover{
+    text-align: center;
+    text-decoration: underline;
+}
 .scrool{
     position: fixed;
     bottom: 50px;
@@ -59,12 +67,33 @@
     font-weight: 900;
 }
 .abt{
-    padding: 80px 0px;
+    padding: 200px 0px;
 }
 .abt-me{
     font-size: 12px;
 }
-@media screen and (max-width:720px) {
+.project{
+    display: flex;
+}
+.probox{
+    padding: 120px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.some{
+    font-size: 40px;
+}
+.main-box{
+    display: flex;
+    gap: 20px;
+}
+@media screen and (max-width:1000px){
+    .main-box{
+        display: flex;
+        gap: 20px;
+    }
+}
+@media screen and (max-width:600px) {
     *{
         overflow-y: visible;
     }
@@ -125,5 +154,17 @@
     }
     .github-link{
         font-size: 15px;
+    }
+    .project{
+        display: block;
+    }
+    .pj{
+        padding: 20px;
+    }
+    .probox{
+        padding: 70px;
+    }
+    .some{
+        font-size: 20px;
     }
 }

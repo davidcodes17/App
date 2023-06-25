@@ -39,7 +39,7 @@ const Header = () => {
         <Flex gap={10} fontSize={12}>
           <a href="#" className="nav">home</a>
           <a href="#id" className="nav">about</a>
-          <Link className="nav">projects</Link>
+          <a href="#project" className="nav">projects</a>
           <Link className="nav">clients</Link>
         </Flex>
         <Flex gap={2}>

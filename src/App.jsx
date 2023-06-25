@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import { ArrowDown3 } from "iconsax-react";
 import About from "./components/About";
 import { Link } from "react-router-dom";
+import Projects from "./components/Projects";
 
 const App = () => {
   return (
@@ -29,6 +30,10 @@ const App = () => {
      </Flex>
       <Box id="id" mt={20}>
         <About />
+      </Box>
+
+      <Box id="project"> 
+          <Projects />
       </Box>
     </Box>
   );
