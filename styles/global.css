@@ -93,7 +93,7 @@
         gap: 20px;
     }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:720px) {
     *{
         overflow-y: visible;
     }
@@ -110,7 +110,7 @@
         display: none;
     }
     .join{
-        background: url('asset.png');
+        background: url('/asset.png');
         background-size: cover;
     }
     .blur{
